@@ -82,7 +82,7 @@ div.desc {
 
             
 <div class="container">
-  <img src="<?php echo get_bloginfo('template_directory'); ?>/f2.jpg" class="img-responsive" alt="Cinque Terre" width="1080" height="536"> 
+  <img src="<?php echo get_bloginfo('template_directory'); ?>/img/f2.jpg" class="img-responsive" alt="Cinque Terre" width="1080" height="536"> 
 </div>
 
 
@@ -97,21 +97,21 @@ div.desc {
 
             <div class="gallery">
   <a target="_blank" href="img_fjords.jpg">
-    <img src="<?php echo get_bloginfo('template_directory'); ?>/digit.png" alt="Trolltunga Norway" width="300" height="200">
+    <img src="<?php echo get_bloginfo('template_directory'); ?>/img/digit.png" alt="Trolltunga Norway" width="300" height="200">
   </a>
   <div class="desc">Digit</div>
 </div>
 
 <div class="gallery">
   <a target="_blank" href="img_forest.jpg">
-    <img src="<?php echo get_bloginfo('template_directory'); ?>/Elec.png" alt="Forest" width="600" height="400">
+    <img src="<?php echo get_bloginfo('template_directory'); ?>/img/Elec.png" alt="Forest" width="600" height="400">
   </a>
   <div class="desc">Electronics for you</div>
 </div>
 
 <div class="gallery">
   <a target="_blank" href="img_lights.jpg">
-    <img src="<?php echo get_bloginfo('template_directory'); ?>/mech.png" alt="Northern Lights" width="600" height="400">
+    <img src="<?php echo get_bloginfo('template_directory'); ?>/img/mech.png" alt="Northern Lights" width="600" height="400">
   </a>
   <div class="desc">Mechatronics</div>
 </div>

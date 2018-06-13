@@ -32,10 +32,12 @@
     <div class="row ">
       <div class="col-lg-3 text-center">
       </div>
-      <div class="col-lg-6 text-center">
+      <div class="col-lg-6 text-left">
       
-    <form action="thankyou.php" method="POST">
+    <form action="<?php echo esc_url( admin_url('admin-post.php') ); ?>"" method="POST">
                     <div class="form-group">
+      <input type="hidden" name="action" value="save_form">
+
       <label for="name">Name:</label>
       <input type="text" class="form-control" name="name"  placeholder="Enter Name ">
     </div>
