@@ -40,24 +40,10 @@
 
       <label for="name">Name:</label>
       <input type="text" class="form-control" name="name"  placeholder="Enter Name ">
-    </div>
-      <div class="form-group">
-      <label for="password">Password:</label>
-      <input type="password" class="form-control"  name="password" placeholder="Enter password">
-    </div>
-    
+
     <div class="form-group">
       <label for="email">Email:</label>
       <input type="email" class="form-control" name="email" placeholder="Enter email">
-    </div>
-    
-    <div class="form-group">
-      <label for="phone">Number:</label>
-      <input type="number" class="form-control"  name="phone" placeholder="Enter phone number">
-    </div>
-    <div class="form-group">
-      <label for="city">City:</label>
-      <input type="text" class="form-control"  name="city" placeholder="Enter City">
     </div>
     
     <div class="form-group">

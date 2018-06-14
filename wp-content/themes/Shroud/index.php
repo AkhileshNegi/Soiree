@@ -50,17 +50,13 @@ div.desc {
   <body>
 
 
-    <div class="blog-masthead">'title',
-            'editor',
-            'excerpt',
+    <div class="blog-masthead">
             
       <div class="container">
         <nav class="blog-nav">
-          <a class="blog-nav-item active" href="#">Home</a>
-          <a class="blog-nav-item" href="#">New features</a>
-          <a class="blog-nav-item" href="#">Press</a>
-          <a class="blog-nav-item" href="#">New hires</a>
-          <a class="blog-nav-item" href="#">About</a>
+          <a class="blog-nav-item active" href="">Home</a>
+          <a class="blog-nav-item" href="registration">Registration</a>
+         
         </nav>
       </div>
     </div>
@@ -68,8 +64,8 @@ div.desc {
     <div class="container">
 
       <div class="blog-header">
-        <h1 class="blog-title">E-library</h1>
-        <p class="lead blog-description">To check library status from anywhere</p>
+        <h1 class="blog-title">Soiree</h1>
+        <p class="lead blog-description">A monthly party organised by ColoredCow.</p>
       </div>
 
       <div class="row">
@@ -77,12 +73,12 @@ div.desc {
         <div class="col-sm-8 blog-main">
 
           <div class="blog-post">
-            <h2 class="blog-post-title">Online Library</h2>
-            <p class="blog-post-meta">January 1, 2014 by <a href="#">Mark</a></p>
+            <h2 class="blog-post-title">Last Party</h2>
+            <p class="blog-post-meta">May 5, 2018 </p>
 
             
 <div class="container">
-  <img src="<?php echo get_bloginfo('template_directory'); ?>/img/f2.jpg" class="img-responsive" alt="Cinque Terre" width="1080" height="536"> 
+  <img src="<?php echo get_bloginfo('template_directory'); ?>/img/pt2.jpg" class="img-responsive" alt="Cinque Terre" width="540" height="540"> 
 </div>
 
 
@@ -92,28 +88,28 @@ div.desc {
 
       <br/>
           <div class="blog-post">
-            <h2 class="blog-post-title">New books availabe</h2>
-            <p class="blog-post-meta">December 14, 2017 by <a href="#">Chris</a></p>
+            <h2 class="blog-post-title">Highlights</h2>
+            <p class="blog-post-meta">May 5, 2018</p>
 
             <div class="gallery">
-  <a target="_blank" href="img_fjords.jpg">
-    <img src="<?php echo get_bloginfo('template_directory'); ?>/img/digit.png" alt="Trolltunga Norway" width="300" height="200">
+  <a target="_blank" href="Cheers!.jpg">
+    <img src="<?php echo get_bloginfo('template_directory'); ?>/img/drnk.jpg" alt="Cheers!" width="300" height="200">
   </a>
-  <div class="desc">Digit</div>
+  <div class="desc">Cheers</div>
 </div>
 
 <div class="gallery">
-  <a target="_blank" href="img_forest.jpg">
-    <img src="<?php echo get_bloginfo('template_directory'); ?>/img/Elec.png" alt="Forest" width="600" height="400">
+  <a target="_blank" href="dance.jpg">
+    <img src="<?php echo get_bloginfo('template_directory'); ?>/img/dance.jpg" alt="Disco" width="600" height="400">
   </a>
-  <div class="desc">Electronics for you</div>
+  <div class="desc">Dance</div>
 </div>
 
 <div class="gallery">
-  <a target="_blank" href="img_lights.jpg">
-    <img src="<?php echo get_bloginfo('template_directory'); ?>/img/mech.png" alt="Northern Lights" width="600" height="400">
+  <a target="_blank" href="songs.jpg">
+    <img src="<?php echo get_bloginfo('template_directory'); ?>/img/songs.jpg" alt="Melody" width="600" height="400">
   </a>
-  <div class="desc">Mechatronics</div>
+  <div class="desc">Music</div>
 </div>
 
 
@@ -124,24 +120,24 @@ div.desc {
 
         <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
           <div class="sidebar-module sidebar-module-inset">
-            <h4>About</h4>
-            <p>Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
+            <h4>About Colored Cow</h4>
+            <p>ColoredCow is a problem solving company; we solve business problems through technology. We center the solutions around our clients and the people their business affects. Our software products and services grow business when we make connection at the heart by making empathy the main element. We believe in providing long lasting solutions that we can share as success stories. A colored cow would always stand out from the crowd; we do justice to our name by reflecting the same in our thoughts and in the way we work.</p>
           </div>
           <div class="sidebar-module">
             <h4>Archives</h4>
             <ol class="list-unstyled">
-              <li><a href="#">March 2014</a></li>
-              <li><a href="#">February 2014</a></li>
-              <li><a href="#">January 2014</a></li>
-              <li><a href="#">December 2013</a></li>
-              <li><a href="#">November 2013</a></li>
-              <li><a href="#">October 2013</a></li>
-              <li><a href="#">September 2013</a></li>
-              <li><a href="#">August 2013</a></li>
-              <li><a href="#">July 2013</a></li>
-              <li><a href="#">June 2013</a></li>
-              <li><a href="#">May 2013</a></li>
-              <li><a href="#">April 2013</a></li>
+              <li><a href="#">March 2018</a></li>
+              <li><a href="#">February 2018</a></li>
+              <li><a href="#">January 2018</a></li>
+              <li><a href="#">December 2018</a></li>
+              <li><a href="#">November 2018</a></li>
+              <li><a href="#">October 2018</a></li>
+              <li><a href="#">September 2018</a></li>
+              <li><a href="#">August 2018</a></li>
+              <li><a href="#">July 2018</a></li>
+              <li><a href="#">June 2018</a></li>
+              <li><a href="#">May 2018</a></li>
+              <li><a href="#">April 2018</a></li>
             </ol>
           </div>
           <div class="sidebar-module">
@@ -159,10 +155,7 @@ div.desc {
     </div><!-- /.container -->
 
     <footer class="blog-footer">
-      <p>Blog template built for <a href="http://getbootstrap.com">Bootstrap</a> by <a href="https://twitter.com/mdo">@mdo</a>.</p>
-      <p>
-        <a href="#">Back to top</a>
-      </p>
+     
     </footer>
 
 
