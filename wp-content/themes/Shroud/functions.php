@@ -79,6 +79,7 @@ function my_theme_add_guest_fields() {
     global $post;
     $email = get_post_meta($post->ID, 'guest_email', true);
     $gender = get_post_meta($post->ID, 'guest_gender', true);
+    $status = get_post_meta($post->ID, 'guest_status', true);
 
     $values = get_post_custom( $post->ID );
     $selected = isset( $values['guest_gender'] ) ? esc_attr( $values['guest_gender'][0] ) : ”;
@@ -93,6 +94,15 @@ function my_theme_add_guest_fields() {
     <option value="female" <?php selected( $selected, 'female' ); ?>>female</option>
     <option value="other" <?php selected( $selected, 'other' ); ?>>other</option>
 </select>
+<br><br>
+
+<label>Status</label><br>
+<select name="status" >
+    <option value="pending" <?php selected( $selected, 'pending' ); ?>>pending</option>
+    <option value="accepted" <?php selected( $selected, 'accepted' ); ?>>accepted</option>
+    <option value="rejected" <?php selected( $selected, 'rejected' ); ?>>rejected</option>
+</select>
+
 <?php
 }
 
@@ -102,7 +112,7 @@ function save_your_guest_details( $post_id ) {
     if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) {
         return $post_id;
     }
-    
+
     // check permissions
     if ( 'guest' === $_POST['post_type'] ) {
         if ( !current_user_can( 'edit_page', $post_id ) ) {
@@ -117,5 +127,9 @@ function save_your_guest_details( $post_id ) {
 
     $gender = $_POST['gender'];
      update_post_meta( $post_id, 'guest_gender', $gender );
+
+     $status = $_POST['status'];
+     update_post_meta( $post_id, 'guest_gender', $status );
+
 }
 add_action( 'save_post', 'save_your_guest_details' );
