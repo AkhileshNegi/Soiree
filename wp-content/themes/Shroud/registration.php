@@ -34,9 +34,9 @@
             
       <div class="container">
         <nav class="blog-nav">
-          <a class="blog-nav-item active" href="../">Home</a>
-          <a class="blog-nav-item" href="registration">Registration</a>
-         <a class="blog-nav-item" href="status">Status</a>
+          <a class="blog-nav-item " href="../">Home</a>
+          <a class="blog-nav-item active" href="registration">Registration</a>
+         <a class="blog-nav-item " href="status">Status</a>
         </nav>
       </div>
     </div>

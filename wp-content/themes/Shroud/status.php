@@ -51,9 +51,9 @@ div.desc {
             
       <div class="container">
         <nav class="blog-nav">
-          <a class="blog-nav-item active" href="../">Home</a>
-          <a class="blog-nav-item" href="registration">Registration</a>
-         <a class="blog-nav-item" href="status">Status</a>
+          <a class="blog-nav-item " href="../">Home</a>
+          <a class="blog-nav-item " href="registration">Registration</a>
+         <a class="blog-nav-item active" href="status">Status</a>
         </nav>
       </div>
     </div>
@@ -61,7 +61,7 @@ div.desc {
     <div class="container">
 
       <div class="blog-header">
-        <h2 class="blog-title">Status</h2>
+        <h2 class="blog-title">Attendees</h2>
         <p class="lead blog-description">To have a quick look of people attending the party</p>
       </div>
 
@@ -72,19 +72,14 @@ div.desc {
           <div class="blog-post">
             <h2 class="blog-title">Invited People</h2>
             <p class="blog-post-meta">For the upcoming party </p>
-
-            
 <div class="container">
- 
-
-
 <?php
    $args = array(
     'post_type' => 'guest',
     'post_status' => 'publish',
     'meta_key' =>'guest_status',
     'meta_value' =>'accepted',
-    'posts_per_page' => '2'
+    'posts_per_page' => '-1'
    );
    $guest_accepted = new WP_Query($args);
   //var_dump($guest_details);
@@ -92,38 +87,20 @@ div.desc {
   while($guest_accepted->have_posts()) : 
   $guest_accepted->the_post();
 ?>
-
-         <h1><span class="glyphicon glyphicon-ok blue">&nbsp</span><?php the_title() ?></h1>
+         <h3><span class="glyphicon glyphicon-ok blue">&nbsp</span><?php the_title() ?></h3>
       <div class='post-content'>
       <?php the_content() ?>
       </div>      
-
 <?php
       endwhile;
    else: 
 ?>
-
-      Oops, there are no posts.
-
+    Oops, there are no posts.
 <?php
    endif;
 ?>
-
-
-
-
-
-
-
-
-  
 </div>
-
-
-
-
-                </div><!-- /.blog-post -->
-
+</div><!-- /.blog-post -->
       <br/>
           <div class="blog-post">
             <h2 class="blog-title">Highlights</h2>
@@ -149,29 +126,18 @@ div.desc {
   </a>
   <div class="desc">Music</div>
 </div>
-
-
-          </div><!-- /.blog-post -->
-
-
-        </div><!-- /.blog-main -->
-
+  </div><!-- /.blog-post -->
+  </div><!-- /.blog-main -->
         <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
           <div class="sidebar-module sidebar-module-inset">
             <h4>About Colored Cow</h4>
             <p>ColoredCow is a problem solving company; we solve business problems through technology. We center the solutions around our clients and the people their business affects. Our software products and services grow business when we make connection at the heart by making empathy the main element. We believe in providing long lasting solutions that we can share as success stories. A colored cow would always stand out from the crowd; we do justice to our name by reflecting the same in our thoughts and in the way we work.</p>
           </div>
         </div><!-- /.blog-sidebar -->
-
-      </div><!-- /.row -->
-
+   </div><!-- /.row -->
     </div><!-- /.container -->
-
     <footer class="blog-footer">
-     
     </footer>
-
-
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
