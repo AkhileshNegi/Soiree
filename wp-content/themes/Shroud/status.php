@@ -84,6 +84,7 @@ div.desc {
     'post_status' => 'publish',
     'meta_key' =>'guest_status',
     'meta_value' =>'accepted',
+    'posts_per_page' => '2'
    );
    $guest_accepted = new WP_Query($args);
   //var_dump($guest_details);

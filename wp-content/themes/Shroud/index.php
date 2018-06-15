@@ -118,23 +118,6 @@ div.desc {
             <p>ColoredCow is a problem solving company; we solve business problems through technology. We center the solutions around our clients and the people their business affects. Our software products and services grow business when we make connection at the heart by making empathy the main element. We believe in providing long lasting solutions that we can share as success stories. A colored cow would always stand out from the crowd; we do justice to our name by reflecting the same in our thoughts and in the way we work.</p>
           </div>
           <div class="sidebar-module">
-            <h4>Archives</h4>
-            <ol class="list-unstyled">
-              <li><a href="#">March 2018</a></li>
-              <li><a href="#">February 2018</a></li>
-              <li><a href="#">January 2018</a></li>
-              <li><a href="#">December 2018</a></li>
-              <li><a href="#">November 2018</a></li>
-              <li><a href="#">October 2018</a></li>
-              <li><a href="#">September 2018</a></li>
-              <li><a href="#">August 2018</a></li>
-              <li><a href="#">July 2018</a></li>
-              <li><a href="#">June 2018</a></li>
-              <li><a href="#">May 2018</a></li>
-              <li><a href="#">April 2018</a></li>
-            </ol>
-          </div>
-          <div class="sidebar-module">
             <h4>Elsewhere</h4>
             <ol class="list-unstyled">
               <li><a href="#">GitHub</a></li>
