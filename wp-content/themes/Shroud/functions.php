@@ -47,7 +47,7 @@ function save_form() {
 
 $email = $_POST['email'];
 $gender = $_POST['gender'];
-
+$status = 'pending';
 
 $id = wp_insert_post([
     'post_title' => $_POST['name'],
@@ -57,6 +57,7 @@ $id = wp_insert_post([
 
 add_post_meta($id, 'guest_email', $email);
 add_post_meta($id, 'guest_gender', $gender);
+add_post_meta($id, 'guest_status', $status);
 }
 
 
@@ -83,6 +84,7 @@ function my_theme_add_guest_fields() {
 
     $values = get_post_custom( $post->ID );
     $selected = isset( $values['guest_gender'] ) ? esc_attr( $values['guest_gender'][0] ) : ”;
+ $selected_status= isset( $values['guest_status'] ) ? esc_attr( $values['guest_status'][0] ) : ”;
 ?>
 <label>Email:</label><br>
 <input type="text" name="email" value="<?php echo $email; ?>">
@@ -98,9 +100,9 @@ function my_theme_add_guest_fields() {
 
 <label>Status</label><br>
 <select name="status" >
-    <option value="pending" <?php selected( $selected, 'pending' ); ?>>pending</option>
-    <option value="accepted" <?php selected( $selected, 'accepted' ); ?>>accepted</option>
-    <option value="rejected" <?php selected( $selected, 'rejected' ); ?>>rejected</option>
+    <option value="pending" <?php selected( $selected_status, 'pending' ); ?>>pending</option>
+    <option value="accepted" <?php selected( $selected_status, 'accepted' ); ?>>accepted</option>
+    <option value="rejected" <?php selected( $selected_status, 'rejected' ); ?>>rejected</option>
 </select>
 
 <?php
@@ -129,7 +131,7 @@ function save_your_guest_details( $post_id ) {
      update_post_meta( $post_id, 'guest_gender', $gender );
 
      $status = $_POST['status'];
-     update_post_meta( $post_id, 'guest_gender', $status );
+     update_post_meta( $post_id, 'guest_status', $status );
 
 }
 add_action( 'save_post', 'save_your_guest_details' );
