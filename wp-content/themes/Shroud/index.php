@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Blog Template for Bootstrap</title>
+    <title>Soiree</title>
 
     <!-- Bootstrap core CSS -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
@@ -17,12 +17,6 @@
     <!-- Custom styles for this template -->
     <link href="<?php echo get_bloginfo('template_directory'); ?>/blog.css" rel="stylesheet">
 
-
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
   <style>
 div.gallery {
     margin: 5px;
@@ -56,7 +50,7 @@ div.desc {
         <nav class="blog-nav">
           <a class="blog-nav-item active" href="">Home</a>
           <a class="blog-nav-item" href="registration">Registration</a>
-         <a class="blog-nav-item" href="/status">Status</a>
+         <a class="blog-nav-item" href="status">Status</a>
         </nav>
       </div>
     </div>
@@ -100,14 +94,14 @@ div.desc {
 
 <div class="gallery">
   <a target="_blank" href="dance.jpg">
-    <img src="<?php echo get_bloginfo('template_directory'); ?>/img/dance.jpg" alt="Disco" width="600" height="400">
+    <img src="<?php echo get_bloginfo('template_directory'); ?>/img/dance.jpg" alt="Disco" width="300" height="200">
   </a>
   <div class="desc">Dance</div>
 </div>
 
 <div class="gallery">
   <a target="_blank" href="songs.jpg">
-    <img src="<?php echo get_bloginfo('template_directory'); ?>/img/songs.jpg" alt="Melody" width="600" height="400">
+    <img src="<?php echo get_bloginfo('template_directory'); ?>/img/songs.jpg" alt="Melody" width=300" height="200">
   </a>
   <div class="desc">Music</div>
 </div>
