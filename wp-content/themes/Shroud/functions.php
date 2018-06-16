@@ -98,12 +98,12 @@ function my_theme_add_guest_fields() {
 </select>
 <br><br>
 
-<label>Status:</label><br><br>
-<input type="button" name="status" style=" background-color: white;color: black;border: 2px solid #008CBA;width: 27%;"value="<?php echo $status; ?>" disabled>
-<br><br>
-<button class="button" value="pending" name="update_status" style=" background-color: white;color: black;border: 2px solid #FFA500;">pending</button>
-<button class="button" value="accepted" name="update_status" style=" background-color: white;color: black;border: 2px solid #4CAF50;">accept</button>
-<button class="button" value="rejected" name="update_status" style=" background-color: white;color: black;border: 2px solid #f44336;">reject</button>
+<label>Status:</label><br>
+<h4 style="margin-top: 0;"><?php echo $status; ?></h4>
+<br>
+<button class="button" value="pending" name="update_status" style=" background-color: #FFA500;color: white;border:none;">Pending</button>
+<button class="button" value="accepted" name="update_status" style=" background-color: #4CAF50;color: white;border:none;">Accept</button>
+<button class="button" value="rejected" name="update_status" style=" background-color: #f44336;color: white;border:none;">Reject</button>
 <?php
 }
 
@@ -129,8 +129,10 @@ function save_your_guest_details( $post_id ) {
     $gender = $_POST['gender'];
      update_post_meta( $post_id, 'guest_gender', $gender );
 
-     $update_status = $_POST['update_status'];
-     update_post_meta( $post_id, 'guest_status', $update_status );
+    if (isset($_POST['update_status'])) {
+        $update_status = $_POST['update_status'];
+        update_post_meta( $post_id, 'guest_status', $update_status );
+    }
 
 }
 add_action( 'save_post', 'save_your_guest_details' );
