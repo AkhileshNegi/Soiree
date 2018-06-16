@@ -84,13 +84,13 @@ function my_theme_add_guest_fields() {
 
     $values = get_post_custom( $post->ID );
     $selected = isset( $values['guest_gender'] ) ? esc_attr( $values['guest_gender'][0] ) : ”;
- $selected_status= isset( $values['guest_status'] ) ? esc_attr( $values['guest_status'][0] ) : ”;
+    $selected_status= isset( $values['guest_status'] ) ? esc_attr( $values['guest_status'][0] ) : ”;
 ?>
 <label>Email:</label><br>
 <input type="text" name="email" value="<?php echo $email; ?>">
 
 <br><br>
-<label>Gender</label><br>
+<label>Gender:</label><br>
 <select name="gender" >
     <option value="male" <?php selected( $selected, 'male' ); ?>>male</option>
     <option value="female" <?php selected( $selected, 'female' ); ?>>female</option>
@@ -98,13 +98,12 @@ function my_theme_add_guest_fields() {
 </select>
 <br><br>
 
-<label>Status</label><br>
-<select name="status" >
-    <option value="pending" <?php selected( $selected_status, 'pending' ); ?>>pending</option>
-    <option value="accepted" <?php selected( $selected_status, 'accepted' ); ?>>accepted</option>
-    <option value="rejected" <?php selected( $selected_status, 'rejected' ); ?>>rejected</option>
-</select>
-
+<label>Status:</label><br><br>
+<input type="button" name="status" style=" background-color: white;color: black;border: 2px solid #008CBA;width: 27%;"value="<?php echo $status; ?>" disabled>
+<br><br>
+<button class="button" value="pending" name="update_status" style=" background-color: white;color: black;border: 2px solid #FFA500;">pending</button>
+<button class="button" value="accepted" name="update_status" style=" background-color: white;color: black;border: 2px solid #4CAF50;">accept</button>
+<button class="button" value="rejected" name="update_status" style=" background-color: white;color: black;border: 2px solid #f44336;">reject</button>
 <?php
 }
 
@@ -130,8 +129,8 @@ function save_your_guest_details( $post_id ) {
     $gender = $_POST['gender'];
      update_post_meta( $post_id, 'guest_gender', $gender );
 
-     $status = $_POST['status'];
-     update_post_meta( $post_id, 'guest_status', $status );
+     $update_status = $_POST['update_status'];
+     update_post_meta( $post_id, 'guest_status', $update_status );
 
 }
 add_action( 'save_post', 'save_your_guest_details' );
