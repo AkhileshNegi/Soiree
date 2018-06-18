@@ -153,7 +153,9 @@ h6, .h6 {
 /*
  * Footer
  */
-
+.king {
+    text-align: center;
+}
 .blog-footer {
   padding: 40px 0;
   color: #999;

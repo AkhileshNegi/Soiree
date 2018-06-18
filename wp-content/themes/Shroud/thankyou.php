@@ -63,7 +63,7 @@
                 <h4 class="blog-title"><font face="Gloucester MT" color="green">  Thank you for the registration</font>
                 </h4> 
            
-        </div><!-- /.blog-post --><br/>
+               </div><br/>
         
                 <div class="blog-post">
                     <h2 class="blog-title">Highlights</h2>

@@ -13,11 +13,7 @@
         <link href="<?php echo get_bloginfo('template_directory'); ?>/css/bootstrap.min.css" rel="stylesheet">
 
         <link href="<?php echo get_bloginfo('template_directory'); ?>/blog.css" rel="stylesheet">
-        <style>
-.king {
-    text-align: center;
-}
-</style>
+       
     </head>
   <body>
     <div class="blog-masthead">       
