@@ -5,20 +5,15 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Status</title>
-
-    <!-- Bootstrap core CSS -->
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom styles for this template -->
+    <title>Thankyou</title>
+    <link href="<?php echo get_bloginfo('template_directory'); ?>/css/bootstrap.min.css" rel="stylesheet">
     <link href="<?php echo get_bloginfo('template_directory'); ?>/blog.css" rel="stylesheet">
 
 	<style>
-	.blue {
+	.clr {
 			color: green;
 		}
 	div.gallery {
@@ -51,22 +46,22 @@
 	  <div class="container">
 			<nav class="blog-nav">
 			<a class="blog-nav-item " href="../">Home</a>
-			<a class="blog-nav-item " href="registration">Registration</a>
-			<a class="blog-nav-item active" href="status">Status</a>
+			<a class="blog-nav-item active" href="registration">Registration</a>
+			<a class="blog-nav-item " href="status">Status</a>
 			</nav>
 	  </div>
 	</div>
 
     <div class="container">
 		<div class="blog-header">
-		<h4 class="blog-title">Attendees</h4>
-		<p class="lead blog-description">To have a quick look of people attending the party</p>
+		<h4 class="blog-title"><font face="Gloucester MT">Attendees</font></h4>
+		<p class="lead blog-description"><h2><font face="Freestyle Script">To have a quick look of people attending the party</font></h2></p>
 		</div>
 		<div class="row">
 			<div class="col-sm-8 blog-main">
           		<div class="blog-post">
-            		<h4 class="blog-title">Invited People</h4>
-            		<p class="blog-post-meta">For the upcoming party </p>
+            		<h4 class="blog-title"><font face="Gloucester MT">Invited People</font>
+</h4>            		<p class="blog-post-meta"><h2><font face="Freestyle Script">For the upcoming party</font></h2> </p>
 						<div class="container">
 				
 				<?php
@@ -83,7 +78,7 @@
 						while($guest_accepted->have_posts()) : 
 						$guest_accepted->the_post();
 				?>
-        			 <h3><span class="glyphicon glyphicon-ok blue">&nbsp</span><?php the_title() ?></h3>
+        			 <h3><span class="glyphicon glyphicon-ok clr">&nbsp</span><?php the_title() ?></h3>
      					 <div class='post-content'>
       			<?php 
       			the_content()

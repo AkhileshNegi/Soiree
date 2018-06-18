@@ -1,16 +1,21 @@
-<?php/* Template Name: Thankyou */?>
+<?php/* Template Name: Already */?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Status</title>
-    <link href="<?php echo get_bloginfo('template_directory'); ?>/css/bootstrap.min.css" rel="stylesheet">
-  <link href="<?php echo get_bloginfo('template_directory'); ?>/blog.css" rel="stylesheet">
+    <title>Already</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="<?php echo get_bloginfo('template_directory'); ?>/blog.css" rel="stylesheet">
 
   <style>
   .blue {
@@ -60,7 +65,7 @@
     <div class="row">
       <div class="col-sm-8 blog-main">
               <div class="blog-post">
-                <h4 class="blog-title"><font face="Gloucester MT" color="green">  Thank you for the registration</font>
+                <h4 class="blog-title"><font face="Gloucester MT" color="green">You have already registered</font>
                 </h4> 
            
         </div><!-- /.blog-post --><br/>

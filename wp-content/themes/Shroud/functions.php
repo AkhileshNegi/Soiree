@@ -58,6 +58,9 @@ $id = wp_insert_post([
 add_post_meta($id, 'guest_email', $email);
 add_post_meta($id, 'guest_gender', $gender);
 add_post_meta($id, 'guest_status', $status);
+
+header("Location:../thankyou");
+
 }
 
 
