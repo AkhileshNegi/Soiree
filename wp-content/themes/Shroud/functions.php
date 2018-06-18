@@ -48,19 +48,30 @@ function save_form() {
 $email = $_POST['email'];
 $gender = $_POST['gender'];
 $status = 'pending';
+$args = array(
+            'post_type' => 'guest',
+            'post_status' => 'publish',
+            'meta_key' =>'guest_email',
+            'meta_value' =>$email,
+            );
 
-$id = wp_insert_post([
-    'post_title' => $_POST['name'],
-    'post_type' => 'guest',
-    'post_status' => 'publish',
-]);
+$check_mail = new WP_Query($args);
+    if($check_mail->have_posts())
+        {
+            header("Location:../already");
+        }
+    else{
+            $id = wp_insert_post([
+                                'post_title' => $_POST['name'],
+                                'post_type' => 'guest',
+                                'post_status' => 'publish',
+                                ]);
+            add_post_meta($id, 'guest_email', $email);
+            add_post_meta($id, 'guest_gender', $gender);
+            add_post_meta($id, 'guest_status', $status);
 
-add_post_meta($id, 'guest_email', $email);
-add_post_meta($id, 'guest_gender', $gender);
-add_post_meta($id, 'guest_status', $status);
-
-header("Location:../thankyou");
-
+            header("Location:../thankyou");
+        }
 }
 
 
