@@ -33,7 +33,7 @@
             </div>
             <div class="col-lg-6 text-left">
       
-              <form action="<?php echo esc_url( admin_url('admin-ajax.php') ); ?>"" method="POST">
+              <form action="<?php echo esc_url( admin_url('admin-ajax.php') ); ?>"" method="POST" id="registration_form">
 
                     <div class="form-group">
                       <input type="hidden" name="action" value="save_form">
@@ -62,16 +62,27 @@
 jQuery(document).ready(function(){
   jQuery("#soiree_request").click(function(){
 
-    console.log('clicked');
-    // var name1 = $("#name").val();
-    // var email1 = $("#email").val();
-    // var gender1 = $("#gender").val();
+    var form = jQuery('#registration_form');
+
+    if (form[0].checkValidity()) {
+      // make ajax call
+      alert('everything is fine!');
+    } else {
+      // report validation error
+      form[0].reportValidity();
+      return false;
+    }
+
+    // var name = $("#name").val();
+    // var email = $("#email").val();
+    // var gender = $("#gender").val();
 
    // Returns successful data submission message when the entered information is stored in database.
-    // var dataString = 'name='+ name1 + '&email='+ email1 + '&gender='+ gender1;
-    // if(name1==''||email1==''||gender1==''){
+    // var dataString = 'name='+ name + '&email='+ email + '&gender='+ gender;
+    // if(name=='' || email=='' || gender==''){
     //   alert("Please Fill All Fields");
-    // } else {
+    // } else {alert('everything is fine!');
+      
     //   // AJAX Code To Submit Form.
     //   $.ajax({
     //     type: "POST",
