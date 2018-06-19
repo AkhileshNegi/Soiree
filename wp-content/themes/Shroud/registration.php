@@ -27,37 +27,36 @@
         </div>
     </div> <br>
 
-    <div id= "box" class="container-fluid king">
-        <div class="row ">
-            <div class="col-lg-3 text-left">
-            </div>
-            <div class="col-lg-6 text-left">
-      
-              <form action="<?php echo esc_url( admin_url('admin-ajax.php') ); ?>"" method="POST" id="registration_form">
+    <div  class="container king">
+      <div id= "box" class="row ">
+          <div class="col-lg-6 text-left">
+                    
+                  <form action="<?php echo esc_url( admin_url('admin-ajax.php') ); ?>"" method="POST" id="registration_form">
 
-                    <div class="form-group">
-                      <input type="hidden" name="action" value="save_form">
-                            <label for="name">Name:</label>
-                      <input type="text" class="form-control" name="name"  placeholder="Enter Name " required>
-                    </div>
+                  <div class="form-group">
+                  <input type="hidden" name="action" value="save_form">
+                  <label for="name">Name:</label>
+                  <input type="text" class="form-control" name="name"  placeholder="Enter Name " required>
+                  </div>
 
-                    <div class="form-group">
-                      <label for="email">Email:</label>
-                      <input type="email" class="form-control" name="email" placeholder="Enter email" required>
-                    </div>
+                  <div class="form-group">
+                  <label for="email">Email:</label>
+                  <input type="email" class="form-control" name="email" placeholder="Enter email" required>
+                  </div>
 
-                    <div class="form-group">
-                      <label for="gender">Gender:</label><br>
-                    <input type="radio" name="gender" value="male" required> Male&nbsp &nbsp &nbsp &nbsp
-                    <input type="radio" name="gender" value="female"> Female &nbsp &nbsp &nbsp &nbsp
-                    <input type="radio" name="gender" value="other"> Other  
-                    </div>
-              <button type="button" class="btn btn-success" id="soiree_request">Request</button>
-            </div>
-                <div class="col-lg-3 text-center">
-                </div>
-           </div>
-          </div>
+                  <div class="form-group">
+                  <label for="gender">Gender:</label><br>
+                  <input type="radio" name="gender" value="male" required> Male&nbsp &nbsp &nbsp &nbsp
+                  <input type="radio" name="gender" value="female"> Female &nbsp &nbsp &nbsp &nbsp
+                  <input type="radio" name="gender" value="other"> Other  
+                  </div>
+
+                  <button type="button" class="btn btn-success" id="soiree_request">Request</button>
+                  
+                 </div>
+                  </form>
+            
+      </div></div></div></body>
       <script type="text/javascript">
 jQuery(document).ready(function(){
   jQuery("#soiree_request").click(function(){
@@ -77,8 +76,13 @@ jQuery(document).ready(function(){
       url: ajaxurl,
        data: dataString,
       success: function(result){
-        alert(result);
-        //$("#box").load("thankyou.php");
+if (result=='1') {
+    $("#box").load("../Thankyou");
+}
+else{
+  $("#box").load("../already");
+}
+        
       },
       error: function(error) {
         alert('ajax failed!');

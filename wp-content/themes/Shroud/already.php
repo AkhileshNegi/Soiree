@@ -5,10 +5,15 @@
   <title></title>
 </head>
 <body>
-<div id="box"class="blog-post">
-<h4 class="blog-title">
-  <font face="Gloucester MT" color="green">  You have already registered</font>
-</h4> 
+<div id="box">
+<div class="container2112">
+  <img src="<?php echo get_bloginfo('template_directory'); ?>/img/party2.jpg" alt="Cheers!" width="600" height="400">
+  <div class="text-block">
+    <h1>Already Registered</h1>
+  
+  </div>
+</div>
+</div> 
 </div>
 </body>
 </html>
