@@ -13,6 +13,7 @@
         <link href="<?php echo get_bloginfo('template_directory'); ?>/css/bootstrap.min.css" rel="stylesheet">
 
         <link href="<?php echo get_bloginfo('template_directory'); ?>/blog.css" rel="stylesheet">
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
        
     </head>
   <body>
@@ -26,13 +27,13 @@
         </div>
     </div> <br>
 
-    <div class="container-fluid king">
+    <div id= "box" class="container-fluid king">
         <div class="row ">
             <div class="col-lg-3 text-left">
             </div>
             <div class="col-lg-6 text-left">
       
-              <form action="<?php echo esc_url( admin_url('admin-post.php') ); ?>"" method="POST">
+              <form action="<?php echo esc_url( admin_url('admin-ajax.php') ); ?>"" method="POST">
 
                     <div class="form-group">
                       <input type="hidden" name="action" value="save_form">
@@ -51,11 +52,42 @@
                     <input type="radio" name="gender" value="female"> Female &nbsp &nbsp &nbsp &nbsp
                     <input type="radio" name="gender" value="other"> Other  
                     </div>
-              <button type="submit" class="btn btn-success">Request Invitation</button>
+              <button type="button" class="btn btn-success" id="soiree_request">Request</button>
             </div>
                 <div class="col-lg-3 text-center">
                 </div>
            </div>
           </div>
+      <script type="text/javascript">
+jQuery(document).ready(function(){
+  jQuery("#soiree_request").click(function(){
+
+    console.log('clicked');
+    // var name1 = $("#name").val();
+    // var email1 = $("#email").val();
+    // var gender1 = $("#gender").val();
+
+   // Returns successful data submission message when the entered information is stored in database.
+    // var dataString = 'name='+ name1 + '&email='+ email1 + '&gender='+ gender1;
+    // if(name1==''||email1==''||gender1==''){
+    //   alert("Please Fill All Fields");
+    // } else {
+    //   // AJAX Code To Submit Form.
+    //   $.ajax({
+    //     type: "POST",
+    //     url: "admin_url('admin-ajax.php') ",
+    //     data: dataString,
+    //     cache: false,
+    //     success: function(result){
+    //       $("#box").load("thankyou.php");
+    //     }
+    //   });
+    // }
+    // return false;
+
+  });
+});
+
+          </script>
   </body>
 </html>
