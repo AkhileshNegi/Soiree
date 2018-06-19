@@ -66,8 +66,25 @@ jQuery(document).ready(function(){
 
     if (form[0].checkValidity()) {
       // make ajax call
-      alert('everything is fine!');
-    } else {
+      // alert('everything is fine!');
+
+      var dataString = form.serialize();
+
+      var ajaxurl = "<?php echo admin_url('admin-ajax.php'); ?>";
+
+    jQuery.ajax({
+      type: "POST",
+      url: ajaxurl,
+       data: dataString,
+      success: function(result){
+        alert(result);
+        //$("#box").load("thankyou.php");
+      },
+      error: function(error) {
+        alert('ajax failed!');
+      }
+    });
+    // } else {
       // report validation error
       form[0].reportValidity();
       return false;
