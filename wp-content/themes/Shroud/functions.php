@@ -1,6 +1,11 @@
 <?php
 
 
+/*function my_theme_scripts() {
+    wp_enqueue_script( 'my-great-script', get_template_directory_uri() . '/js/mainjs.js', array( 'jquery' ), '1.0.0', true );
+}
+add_action( 'wp_enqueue_scripts', 'my_theme_scripts' );
+*/
 // add a custom post type named guest
 add_action('init', 'register_guest_post_type');
 function register_guest_post_type() {
@@ -40,9 +45,17 @@ function register_guest_post_type() {
     register_post_type( 'guest', $args );
 }
 
+function add_scripts(){
+   wp_enqueue_script('cool', get_template_directory_uri() . '/js/mainjs.js', array('jquery'), false, true); 
+}
+add_action('wp_enqueue_scripts','add_scripts');
 
 add_action('wp_ajax_save_form', 'save_form');
 add_action('wp_ajax_nopriv_save_form', 'save_form');
+
+// die(get_template_directory_uri() . '/js/mainjs.js');
+
+
 function save_form() {
     
   

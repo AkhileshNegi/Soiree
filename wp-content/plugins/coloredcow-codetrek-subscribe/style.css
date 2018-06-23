@@ -1,0 +1,132 @@
+#responses_modal, #dashboard_responses_modal{
+	position: fixed;
+	z-index: 1001;
+	left: 300px;
+	top: 30px;
+	width: 50%;
+	height: 80%;
+	display: none;
+}
+
+textarea {
+	width: 100%;
+}
+
+.modal-content {
+	background-color: #fefefe;
+	margin: 15% auto;
+	padding: 10px;
+	border: 1px solid #888;
+	height: 80%;
+	overflow-y: auto;
+	overflow-x: visible;
+}
+
+.modal-content-section {
+	padding: 30px;
+}
+
+.close {
+	color: #aaa;
+	float: right;
+	font-size: 18px;
+}
+
+.close:hover,
+.close:focus {
+	color: black;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.review-button {
+	background-color: #0085ba;
+	border-color: #0073aa #006799 #006799;
+	color: #fff;
+	text-decoration: none;
+	margin-top: 10px;
+	border-radius: 4px;
+}
+
+.form-answer {
+	font-size: 14px;
+	font-weight: 100;
+}
+
+.custom-gray-button,.custom-blue-button, .custom-nudge-button {
+	width: 250px ;
+	height: 25px ;
+	margin: 5px ; 
+}
+.custom-gray-button {
+	background-color: gray ;
+	border-color: gray ;
+	color: white ;
+}
+
+.custom-blue-button {
+	background-color: darkblue ;
+	border-color: darkblue ;
+	color: white ;
+}
+
+.button-row {
+	padding-top: 10px;
+}
+
+.custom-nudge-button {
+	background-color: deepskyblue ;
+	border-color: deepskyblue ;
+	color: #fff ;
+}
+
+.custom-button {
+	display: inline-block;
+	text-align: center;
+	vertical-align: middle;
+	cursor: pointer;
+	border: 1px solid transparent;
+	white-space: nowrap;
+	font-size: 14px;
+	line-height: 1.6;
+	border-radius: 4px;
+}
+
+.nudge-count {
+	font-size: 16px;
+}
+
+.loader {
+	position: absolute;
+	left: 44%;
+	border: 10px solid lightblue;
+	border-radius: 50%;
+	border-top: 10px solid lightgray;
+	border-bottom: 10px solid lightgray;
+	width: 60px;
+	height: 60px;
+	animation: spin 3s linear infinite;
+}
+
+@keyframes spin {
+	0% { transform: rotate(0deg); }
+	100% { transform: rotate(360deg); }
+}
+
+.dashboard-form-question {
+	font-weight: 500;
+	font-size: 15px;
+}
+
+.name-heading, .session-heading {
+	font-size: 18px;
+	font-weight: 500;
+}
+
+.next-previous-links {
+	text-align: center;
+	padding-top: 30px;
+}
+.codetrek-widget, .codetrek-widget>p {
+	font-size: 15px;
+}
